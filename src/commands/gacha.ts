@@ -26,7 +26,7 @@ export function setupGacha(bot: Telegraf<ContextMessageUpdate>) {
       ['500', 10],
     ];
     const text = pick(pool);
-    ctx.reply(loc(text, chat.language), {
+    ctx.reply(loc('500', chat.language), {
     disable_notification: true,})
 
 })
