@@ -17,7 +17,7 @@ export function setupGacha(bot: Telegraf<ContextMessageUpdate>) {
     var idx = Math.floor(Math.random() * notRandomNumbers.length);
     var text = ""
 
-    if (gachas[idx] == 0) text = '殘念! 槓龜!"
+    if (gachas[idx] == 0) text = '殘念! 槓龜!'
     if (gachas[idx] == 10) text = '這次抽到的彩蛋是 10倍 !'
     if (gachas[idx] == 20) text = '這次抽到的彩蛋是 20倍 !'
     if (gachas[idx] == 30) text = '這次抽到的彩蛋是 30倍 !'
