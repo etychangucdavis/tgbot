@@ -9,17 +9,27 @@ import { loc } from '../helpers/locale'
  * @param bot Bot to setup the commands
  */
 export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command(['start', 'help'], async (ctx) => {
+  bot.command(['gacha', 'help'], async (ctx) => {
     // Check if admin
     const isAdmin = await checkIfAdmin(ctx)
     if (!isAdmin) return
     // Get chat
     const chat = await findChat(ctx.chat.id)
     // Reply
-    const text = loc('public_help_start', chat.language)
-    ctx.replyWithMarkdown(text, {
-      disable_notification: true,
-      disable_web_page_preview: true,
-    })
+    const pick = require('pick-random-weighted');
+ 
+    const pool = [
+      ['zero', 30],
+      ['ten', 30],
+      ['twenty', 30],
+      ['thirty', 30],
+      ['fifty', 30],
+      ['oneh', 20],
+      ['twoh', 20],
+      ['fiveh', 10],
+    ];
+    const text = pick(pool);
+    ctx.reply(loc(text, chat.language), {
+    disable_notification: true,})
   })
 }
