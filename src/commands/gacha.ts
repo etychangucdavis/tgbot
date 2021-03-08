@@ -59,4 +59,5 @@ export function setupGacha(bot: Telegraf<ContextMessageUpdate>) {
       disable_notification: true})
     }
 
+})
 }
