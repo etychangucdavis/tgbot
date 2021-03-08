@@ -20,44 +20,43 @@ export function setupGacha(bot: Telegraf<ContextMessageUpdate>) {
     {
       const text = '0';
       ctx.reply(loc(text, chat.language), {
-      disable_notification: true,
-    })
+      disable_notification: true,})
+    }
     if (gachas[idx] == 10)
     {
       const text = '10';
       ctx.reply(loc(text, chat.language), {
-      disable_notification: true,
-    })
+      disable_notification: true})
+    }
     if (gachas[idx] == 20)    {
       const text = '10';
       ctx.reply(loc(text, chat.language), {
-      disable_notification: true,
-    })
+      disable_notification: true)
+    }
     if (gachas[idx] == 30)     {
       const text = '30';
       ctx.reply(loc(text, chat.language), {
-      disable_notification: true,
-    })
+      disable_notification: true})
+    }
     if (gachas[idx] == 50)     {
       const text = '50';
       ctx.reply(loc(text, chat.language), {
-      disable_notification: true,
-    })
+      disable_notification: true})
+    }
     if (gachas[idx] == 100)     {
       const text = '100';
       ctx.reply(loc(text, chat.language), {
-      disable_notification: true,
-    })
+      disable_notification: true})
+    }
     if (gachas[idx] == 200)     {
       const text = '200';
       ctx.reply(loc(text, chat.language), {
-      disable_notification: true,
-    })
+      disable_notification: true})
+    }
     if (gachas[idx] == 500)     {
       const text = '500';
       ctx.reply(loc(text, chat.language), {
       disable_notification: true,
-    })
+    }
 
-  })
 }
