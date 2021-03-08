@@ -16,17 +16,17 @@ export function setupGacha(bot: Telegraf<ContextMessageUpdate>) {
     const pick = require('pick-random-weighted');
  
     const pool = [
-      ['0', 30],
-      ['10', 30],
-      ['20', 30],
-      ['30', 30],
-      ['50', 30],
-      ['100', 20],
-      ['200', 20],
-      ['500', 10],
+      ['zero', 30],
+      ['ten', 30],
+      ['twenty', 30],
+      ['thirty', 30],
+      ['fifty', 30],
+      ['oneh', 20],
+      ['twoh', 20],
+      ['fiveh', 10],
     ];
     const text = pick(pool);
-    ctx.reply(loc('500', chat.language), {
+    ctx.reply(loc(text, chat.language), {
     disable_notification: true,})
 
 })
