@@ -17,17 +17,17 @@ export function setupGacha(bot: Telegraf<ContextMessageUpdate>) {
     var idx = Math.floor(Math.random() * gachas.length);
     var text = '';
 
-    if (gachas[idx] == 0) text = '殘念! 槓龜!';
-    if (gachas[idx] == 10) text = '這次抽到的彩蛋是 10倍 !';
-    if (gachas[idx] == 20) text = '這次抽到的彩蛋是 20倍 !';
-    if (gachas[idx] == 30) text = '這次抽到的彩蛋是 30倍 !';
-    if (gachas[idx] == 50) text = '這次抽到的彩蛋是 50倍 !';
-    if (gachas[idx] == 100) text = '這次抽到的彩蛋是 100倍 !';
-    if (gachas[idx] == 200) text = '這次抽到的彩蛋是 200倍 !';
-    if (gachas[idx] == 500) text = '這次抽到的彩蛋是破天荒的 500倍 ! 佛心教主凱瑞!';
+    if (gachas[idx] == 0) text = '0';
+    if (gachas[idx] == 10) text = '10';
+    if (gachas[idx] == 20) text = '20';
+    if (gachas[idx] == 30) text = '30';
+    if (gachas[idx] == 50) text = '50';
+    if (gachas[idx] == 100) text = '100';
+    if (gachas[idx] == 200) text = '200';
+    if (gachas[idx] == 500) text = '500';
 
     // Reply
-    ctx.reply('123', {
+    ctx.reply(loc(text, chat.language), {
       disable_notification: true,
     })
 
