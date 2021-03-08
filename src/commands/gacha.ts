@@ -3,6 +3,7 @@ import { Telegraf, ContextMessageUpdate } from 'telegraf'
 import { checkIfAdmin } from '../helpers/checkAdmin'
 import { findChat } from '../models/chat'
 import { loc } from '../helpers/locale'
+import { pick } from 'pick-random-weighted'
 
 
 export function setupGacha(bot: Telegraf<ContextMessageUpdate>) {
