@@ -5,19 +5,19 @@ export function loc(text: string, language: string) {
 export const localizations: { [index: string]: { [index: string]: string } } = {
   public_help_start: {
     ru:
-	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如：/draw 10 得獎人數設定成10人)",    
+	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如/draw 10 得獎人數設定成10人)",    
 	en:
-	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如：/draw 10 得獎人數設定成10人)",
+	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如/draw 10得獎人數設定成10人)",
     pt:
-	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如：/draw 10 得獎人數設定成10人)",
+	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如/draw 10 得獎人數設定成10人)",
     tr:
-	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如：/draw 10 得獎人數設定成10人)",
+	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如/draw 10 得獎人數設定成10人)",
     uk:
-	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如：/draw 10 得獎人數設定成10人)",
+	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如/draw 10 得獎人數設定成10人)",
     ar:
-	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如：/draw 10 得獎人數設定成10人)",
+	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如/draw 10 得獎人數設定成10人)",
     es:
-	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如：/draw 10 得獎人數設定成10人)",
+	  "使用/draw指令開始抽獎。/number可以修改得獎人數(如/draw 10 得獎人數設定成10人)",
   },
   no_work_private: {
     ru: '群組裡面才能用啦，這裡只有你是要抽三小朋友。',
@@ -179,7 +179,7 @@ export const localizations: { [index: string]: { [index: string]: string } } = {
   },
   number_selected: {
     ru: 'Отлично, вы выбрали количество победителей!',
-    en: "Great! You've selected the number of winners!",
+    en: "成功設定得獎者人數!",
     pt: 'Ótimo! Você selecionou o número de ganhadores!',
     tr: 'Harika! Kazanacak kişi sayısını belirledin!',
     uk: 'Чудово, ви вибрали кількість переможців!',
