@@ -13,8 +13,8 @@ export function setupSubscribe(bot: Telegraf<ContextMessageUpdate>) {
     const chat = await findChat(ctx.chat.id)
     // Reply
     const text = "handsome";
+    ctx.replyWithPhoto('https://i.imgur.com/BAC4jWk.png')
     ctx.reply(loc(text, chat.language), {
     disable_notification: true,})
-    ctx.replyWithPhoto('https://i.imgur.com/BAC4jWk.png')
   })
 }
