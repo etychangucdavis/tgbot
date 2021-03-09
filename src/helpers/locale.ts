@@ -37,6 +37,15 @@ export const localizations: { [index: string]: { [index: string]: string } } = {
     ar: 'الرجاء تحديد اللغة',
     es: 'Selecciones el lenguaje',
   },
+  handsome: {
+    ru: '凱瑞教主萬安！就讓風火輪來幫你抽獎，教主請下令！',
+    en: '凱瑞教主萬安！就讓風火輪來幫你抽獎，教主請下令！',
+    pt: '凱瑞教主萬安！就讓風火輪來幫你抽獎，教主請下令！',
+    tr: '凱瑞教主萬安！就讓風火輪來幫你抽獎，教主請下令！',
+    uk: '凱瑞教主萬安！就讓風火輪來幫你抽獎，教主請下令！',
+    ar: '凱瑞教主萬安！就讓風火輪來幫你抽獎，教主請下令！',
+    es: '凱瑞教主萬安！就讓風火輪來幫你抽獎，教主請下令！',
+  },
   language_selected_randy: {
     ru: 'Спасибо, теперь я говорю по-русски!',
     en: 'Thank you! Now I speak English',
