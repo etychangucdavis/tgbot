@@ -9,7 +9,7 @@ import { loc } from '../helpers/locale'
  * @param bot Bot to setup the commands
  */
 export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
-  bot.command(['gacha', 'help'], async (ctx) => {
+  bot.command(['gacha', 'open'], async (ctx) => {
     // Check if admin
     const isAdmin = await checkIfAdmin(ctx)
     if (!isAdmin) return
