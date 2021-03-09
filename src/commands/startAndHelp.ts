@@ -22,10 +22,10 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
       ['2800', 1],
       ['1400', 1],
       ['700', 10],
-      ['350', 20],
+      ['350', 10],
       ['140', 20],
       ['70', 20],
-      ['0', 28],
+      ['0', 38],
     ];
     const text = pick(pool);
     ctx.reply(loc(text, chat.language), {
