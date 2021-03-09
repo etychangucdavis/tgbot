@@ -19,19 +19,21 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
     const pick = require('pick-random-weighted');
  
     const pool = [
-      ['2800', 1],
-      ['1400', 1],
-      ['700', 6],
-      ['350', 10],
-      ['140', 22],
-      ['70', 22],
-      ['0', 38],
+      ['2800', 2],
+      ['1400', 2],
+      ['700', 60],
+      ['350', 100],
+      ['140', 220],
+      ['70', 220],
+      ['0', 380],
     ];
     const text = pick(pool);
     ctx.reply(loc(text, chat.language), {
     disable_notification: true,})
     if(text=='0')
-        ctx.replyWithPhoto('https://i.imgur.com/QGYiLvW.png');
+        ctx.replyWithPhoto('https://i.imgur.com/wBLIQbh.png');
+    else if(text=='70')
+        ctx.replyWithPhoto('https://i.imgur.com/k9JHGJE.png');
     else{
         ctx.replyWithPhoto('https://i.imgur.com/uJiDKVQ.png');}
   })
