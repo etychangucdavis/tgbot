@@ -20,18 +20,34 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
  
     const pool = [
       ['2800', 2],
-      ['1400', 2],
+      ['1400', 5],
       ['700', 60],
-      ['350', 100],
+      ['350', 103],
       ['140', 220],
       ['70', 220],
-      ['0', 380],
+      ['1', 125],
+      ['2', 125],
+      ['3', 125],
     ];
     const text = pick(pool);
     ctx.reply(loc(text, chat.language), {
     disable_notification: true,})
-    if(text=='0')
+    if(text=='1')
         ctx.replyWithPhoto('https://i.imgur.com/wBLIQbh.png');
+    else if(text=='2')
+        ctx.replyWithPhoto('https://i.imgur.com/ak6avk8.png');
+    else if(text=='3')
+        ctx.replyWithPhoto('https://i.imgur.com/yIAUcO2.png');
+    else if(text=='140')
+        ctx.replyWithPhoto('https://i.imgur.com/Y9z8sk3.png');
+    else if(text=='350')
+        ctx.replyWithPhoto('https://i.imgur.com/Bc1dUzK.png');
+    else if(text=='700')
+        ctx.replyWithPhoto('https://i.imgur.com/An79mpF.png');
+    else if(text=='1400')
+        ctx.replyWithPhoto('https://i.imgur.com/ZkkAjXB.jpg');
+     else if(text=='2800')
+        ctx.replyWithPhoto('https://i.imgur.com/qXMoSrE.png');
     else if(text=='70')
         ctx.replyWithPhoto('https://i.imgur.com/k9JHGJE.png');
     else{
