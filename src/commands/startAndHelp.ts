@@ -17,7 +17,7 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
     const chat = await findChat(ctx.chat.id)
     // Reply
     const pick = require('pick-random-weighted');
- 
+    var sleep = require('sleep');
     const pool = [
       ['2800', 2],
       ['1400', 5],
@@ -29,6 +29,11 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
       ['2', 125],
       ['3', 125],
     ];
+    
+    ctx.reply('這次禮包裡面的獎品是．．．')
+    ctx.replyWithPhoto('https://i1.kknews.cc/SIG=k5e5i6/ctp-vzntr/or085o99q6sr466qn4p6ns46p40qq246.jpg');
+    sleep.sleep(4);
+    
     const text = pick(pool);
     ctx.reply(loc(text, chat.language), {
     disable_notification: true,})
@@ -41,7 +46,7 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
     else if(text=='140')
         ctx.replyWithPhoto('https://i.imgur.com/yIAUcO2.png');
     else if(text=='350')
-        ctx.replyWithPhoto('https://i.imgur.com/Bc1dUzK.png');
+        ctx.replyWithPhoto('https://i.imgur.com/NK4KJxP.png');
     else if(text=='700')
         ctx.replyWithPhoto('https://i.imgur.com/An79mpF.png');
     else if(text=='1400')
