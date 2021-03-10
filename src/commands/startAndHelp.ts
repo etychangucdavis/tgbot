@@ -9,6 +9,7 @@ import { loc } from '../helpers/locale'
  * @param bot Bot to setup the commands
  */
 export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
+  const delay = require('delay');
   bot.command(['gacha', 'open'], async (ctx) => {
     // Check if admin
     const isAdmin = await checkIfAdmin(ctx)
@@ -17,7 +18,6 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
     const chat = await findChat(ctx.chat.id)
     // Reply
     const pick = require('pick-random-weighted');
-    const delay = require('delay');
 
     const pool = [
       ['2800', 2],
@@ -34,7 +34,7 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
     
     ctx.replyWithDocument('https://i1.kknews.cc/SIG=k5e5i6/ctp-vzntr/or085o99q6sr466qn4p6ns46p40qq246.jpg');
     ctx.reply('各位觀眾！\n這次福袋裡面的獎品是．．．')
-    
+    await delay(4000);
     const text = pick(pool);
     ctx.reply(loc(text, chat.language), {
     disable_notification: true,})
