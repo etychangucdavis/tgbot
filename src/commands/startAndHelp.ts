@@ -17,7 +17,7 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
     const chat = await findChat(ctx.chat.id)
     // Reply
     const pick = require('pick-random-weighted');
-    var sleep = require('system-sleep');
+    const delay = require('delay');
 
     const pool = [
       ['2800', 2],
@@ -34,7 +34,7 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
     
     ctx.replyWithPhoto('https://i1.kknews.cc/SIG=k5e5i6/ctp-vzntr/or085o99q6sr466qn4p6ns46p40qq246.jpg');
     ctx.reply('各位觀眾！\n這次福袋裡面的獎品是．．．')
-    sleep(4000);
+    await delay(4000);
     
     const text = pick(pool);
     ctx.reply(loc(text, chat.language), {
