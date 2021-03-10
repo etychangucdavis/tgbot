@@ -45,7 +45,7 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
     else if(text=='3')
         ctx.replyWithPhoto('https://i.imgur.com/Y9z8sk3.png');
     else if(text=='140')
-        ctx.replyWithPhoto('https://i.imgur.com/yIAUcO2.png');
+        ctx.replyWithPhoto('https://i.imgur.com/lGXQuz7.jpg');
     else if(text=='350')
         ctx.replyWithPhoto('https://i.imgur.com/NK4KJxP.png');
     else if(text=='700')
