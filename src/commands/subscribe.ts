@@ -12,9 +12,11 @@ export function setupSubscribe(bot: Telegraf<ContextMessageUpdate>) {
     // Get chat
     const chat = await findChat(ctx.chat.id)
     // Reply
-    const text = "handsome";
+    var sleep = require('sleep');
+    ctx.reply('教主在招喚我．．．')
+    sleep.sleep(1);
     ctx.replyWithPhoto('https://i.imgur.com/BAC4jWk.png')
-    ctx.reply(loc(text, chat.language), {
-    disable_notification: true,})
-  })
+    sleep.sleep(2);
+    ctx.reply('凱瑞教主萬安！就讓風火輪來幫你抽獎，教主請下令！')
+    
 }
