@@ -30,8 +30,9 @@ export function setupStartAndHelp(bot: Telegraf<ContextMessageUpdate>) {
       ['3', 125],
     ];
     
-    ctx.reply('這次福袋裡面的獎品是．．．')
+    
     ctx.replyWithPhoto('https://i1.kknews.cc/SIG=k5e5i6/ctp-vzntr/or085o99q6sr466qn4p6ns46p40qq246.jpg');
+    ctx.reply('各位觀眾！\n這次福袋裡面的獎品是．．．')
     sleep.sleep(4);
     
     const text = pick(pool);
